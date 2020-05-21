@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Example of using the validation API</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="main.js"></script>
+
+    <style>
+        .myForm input:invalid { 
+            background-color: lightPink;
+        }
+        
+        .myForm input:valid { 
+            background-color:lightGreen; 
+        }
+        
+        .myForm input:required {
+            border: 2px solid red;
+        }
+        
+        .myForm input:optional {
+            border: 2px solid green;
+        }
+        
+        .myForm label { 
+            display: inline-block; 
+            width: 140px; 
+            text-align: right; 
+        } 
+    </style>
+</head>
+<body>
+    <form class="myForm" onsubmit="return submitForm();">
+        <fieldset>
+            <legend>Example use of the validation API: try to submit with different passwords, and with same passwords</legend>
+            <label for="password1" >Password:</label> <input type="password" id="password1" oninput="checkPasswords()" required>
+            
+            <p></p>
+
+            <label for="password2">Repeat password:</label> <input type="password" id="password2" oninput="checkPasswords()" required>
+            
+            <p></p>
+            
+            <button>Submit</button>
+        </fieldset>
+    </form>
+</body>
+</html>

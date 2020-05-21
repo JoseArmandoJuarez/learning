@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+    <h1>Operators</h1>
+
+    <script>
+        //The operator (+)
+        var s1 = 'one';
+        var s2 = 'two';
+        var s = s1 + s2;
+        console.log(s); //returns 'onetwo'
+        
+        //The assignment operator (+=)
+        var s1 = 'one';
+        var s2 = 'two';
+         s1 += s2; // or directly s1 += 'two'
+        console.log(s1);//retunrs 'onetwo'
+
+        //The concat() method
+        var s1 = 'one';
+        var s2 = 'two';
+        var s = s1.concat(s2);
+        console.log(s); //returns 'onetwo'
+
+        //can be also be use with varaible number if arguments
+        var s1 = 'Hello';
+        s1 = s1 + ' World ' + ' Javascript ';
+        console.log(s1);
+
+        var s2 = 'Hello';
+        s2 += ' World ' + ' Javascript ';
+        console.log(s2);
+
+        var s3 = 'Hello';
+        var s3 = s3.concat(' World ' , ' Javascript ');
+        console.log(s3);
+
+        //Converting strings
+        var s = '1';
+        s = 3 * s;
+        console.log(s);
+
+        var s = '1'; 
+        s++;
+        console.log(s); //returns 2
+
+        var s = "100";
+        var s = s * 1;
+        console.log(s);
+
+        var d = "101 dalmatians";
+        var d = d * 1;
+        console.log(d);
+
+
+        //How to convert a number into a string
+        var n = 1;
+        var n = "" + n;
+        console.log(n); //returns 1
+
+        //The \ is useful for "escaping" 
+        //special characters. Here are a few examples
+        var s = 'I don\'t know';
+        console.log(s);
+
+        var s = '"Hello", she said.' // double quotes inside single one will be displayed
+        console.log(s);
+
+        var s = "\"Hello\", she said." //double quotes inside doble quotes need to be escaped
+        console.log(s);
+
+        //Escaping the escape! USe a double "\"
+        var s = "1\\2";
+        console.log(s);
+
+        //Special characters starting with "\"
+        //"\n" for next line
+        var s = '\n1\n2\n3\n';
+        console.log(s);
+
+        //"\r" for "carriage return"
+        var s = '\n1\r2';
+        console.log(s);
+
+        var s = '\n1\n\r2';
+        console.log(s);
+
+        var s = '\n1\r\n2';
+        console.log(s);
+
+        //"\t" for inserting a tabulation
+        var s = "1\t2";
+        console.log(s);
+
+
+    </script>
+
+</body>
+</html>

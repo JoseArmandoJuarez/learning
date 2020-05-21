@@ -1,0 +1,44 @@
+table.table1, th.table1, td.table1 {border: 1px solid black;}
+table.table1 { border-collapse: collapse;}
+th.table1,td.table1 {padding:10px;}
+
+/*start table 2*/
+
+table.t2, td.t2, th.t2 {border: 2px solid black;}
+table.t2 {border-collapse: collapse;}
+td.t2, th.t2 {padding: 10px;}
+thead.t2 {background-color: #44494A;
+color: white;}
+tbody.t2 {background-color: #8D9699;
+color: white;}
+
+
+/*table 3*/
+table.t3 {width: 100%;}
+thead.t3 {background-color: #5D9CF2;
+color:white;}
+tbody.t3 tr:nth-child(even) {background-color: #DFECF2;}
+tbody.t3 tr:nth-child(odd) {background-color:#B8DEF2;}
+th.t3, td.t3 { padding: 15px;}
+
+/*table4 structure*/
+
+table.t4, th.t4, td.t4 { border: 2px solid black;}
+table.t4 {border-collapse: collapse;}
+th.t4,td.t4 {padding:15px;}
+div {width: 50%; height: 200px;}
+div {overflow: scroll;}
+
+/*t4 style code*/
+
+thead.t4 {background-color: #5D9CF2;
+color:white;}
+tbody.t4 tr:nth-child(even) {background-color: #DFECF2;}
+tbody.t4 tr:nth-child(odd) {background-color:#B8DEF2;}
+tbody.t4 tr:hover {background-color: yellow;}
+
+
+
+
+
+

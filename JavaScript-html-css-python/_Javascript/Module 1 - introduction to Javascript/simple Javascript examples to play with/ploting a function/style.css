@@ -1,0 +1,34 @@
+
+h1{
+    margin-left: 250px;
+    text-decoration: underline;
+   
+  }
+  
+  #quadratic {
+    
+      border: 2px black dashed;
+    margin-top: 25px;
+    margin-left: 50px;
+    padding: 25px;
+    width: 500px;
+    height: 350px;
+  }
+  
+  #sin {
+    
+    margin-top: 25px;
+    border: 2px black dashed;
+    width: 500px;
+  margin-left: 50px;
+    padding: 25px;
+  }
+  
+  #multiple {
+    border: 2px black dashed;
+    margin-top: 25px;
+    margin-left: 50px;
+    width: 500px;
+    padding: 25px;
+    
+  }

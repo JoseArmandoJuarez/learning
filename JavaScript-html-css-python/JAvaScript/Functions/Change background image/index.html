@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript can change CSS properties on the fly</title>
+<script type="text/javascript" src="javascript.js" ></script>
+
+<style>
+    #theDiv {
+  width:105px;
+  height:33px;
+  background-color: pink;
+}
+</style>
+
+</head>
+<body onload="init();">
+
+  <p>Here is a div. Click the button below to change its style!</p>
+    <p>
+  <button onclick="addImageIntoBackground();">Add background image</button>
+  </p>
+  <div id="theDiv">
+  This is a div!
+</div>
+ 
+</body> 
+</html>

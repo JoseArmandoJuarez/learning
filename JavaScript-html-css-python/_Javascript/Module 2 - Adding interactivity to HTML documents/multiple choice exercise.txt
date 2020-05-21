@@ -1,0 +1,328 @@
+var x = 2;
+var y = '2';
+
+console.log((x == y));
+console.log((x === y));
+
+Q : In JavaScript we can make comparisons using == or ===. 
+    What will the code above display in the devtool console when executed?
+A : true and on the next line false
+
+-------------------------
+
+
+var a = 3;
+var b = 10;
+ 
+if ((a === 5) && (b === 6))  { 
+    console.log('a is equal to 5 and b is equal to 6');
+}
+
+
+Q : When will the expression (b === 6) be evaluated?
+A : never
+
+---------------------------
+
+var gear = '';
+var cloudColor = 'yellow';
+
+switch(cloudColor) {
+    case 'yellow': gear += 'psychedelic swimmnig suit,';
+    case 'black': gear += ' boots, '; break;
+    case 'grey': gear += ' umbrella, ';
+    case 'white': gear += ' jacket, ';
+    default: gear += ' watch';
+}
+
+console.log('gear: ' + gear);
+
+
+
+Q : Check the gear that will be printed to the devtool console (2 correct answers!)
+
+1. psychedelic swimming suit
+2. boots
+3. umbrella
+4. jacket
+5. watch
+
+A : psychedelic swimming suit, boots
+
+-------------------------------------
+
+var score = 69;
+var message='';
+ 
+switch(score) {
+  case (score === 69):
+    message += 'Not bad!';
+    break;
+  case (100): 
+       message += 'Great, perfect score!';
+}
+
+console.log(message);
+
+Q : Will the message be assigned the value 'Not Bad!'?
+A : No
+    With the switch statement, if the value of an expression equals one of the cases 
+    (the equality operator evaluated is ===), all the statements next to this case block 
+    are executed sequentially until the keyword break is reached.
+
+    The (score === 69) expression will be evaluated to true. 
+    Then the test (score === true) will be performed. And it will be false (as score has the value 69), 
+    then the block of instruction that assign 'Not Bad!' to message will NEVER be executed.
+
+---------------------------------------
+
+var x = ...;
+
+if(x) { console.log("Evaluated as true!!!"); }
+
+Q : When tested, which of these values for x will be evaluated as true? (3 correct answerts!)
+
+1. "" (empty string)
+2. "Hello"
+3. undefined
+4. "false"
+5. 1
+6. 0
+7. NaN
+
+A :  2, 4, 5
+
+--------------------------------------------
+
+function choose(x, m1, m2) {
+  return x <= m1 ? m1 : x >= m2 ? m2 : x; 
+}
+var result1 = choose(5, 10, 40);
+console.log("result1 = " + result1);
+
+var result2 = choose(20, 10, 40);
+console.log("result2 = " + result2);
+
+var result3 = choose(70, 10, 40);
+console.log("result3 = " + result3);
+
+Q : What will be the values of the variables result1, result2 and result3 after the execution of the above code?
+A : 10, 20 and 40
+
+----------------------------------------
+
+var i = 1, j = 2;
+ 
+while ( i < 4 ) {
+    j += 2;
+    i += 1; 
+}
+console.log("i = " + i);
+console.log("j = " + j);
+
+Q : After the while loop, what are the values of i and j?
+A : i = 4 and j = 8
+
+--------------------------------------
+
+
+var i = 10;
+ 
+do {
+  i+=2;
+  console.log(i + " ");
+} while(i < 20);
+
+
+Q : What will be printed to the devtool console?
+A : 12 14 16 18, 20, each one on a different line 
+
+-----------------------------------------
+
+for (var i = 0, j = 0; i <= 10; i++, j+=2) {
+  console.log('i = ' + i + ' j = ' + j);
+}
+
+Q : Can a for loop have more than one instruction in the "initialization part", 
+    and more than one instruction in the "incrementation part", like in the above example?
+A : Yes
+
+---------------------------------------------
+
+var rect1 = {       // rect1 is an object
+    x:10,                               
+    y: 12,
+    width: 50,
+    height: 100
+}
+ 
+for(var property XXX rect1) {                                   
+    console.log(property);                                                               
+}
+
+Q : What would you put instead of XXX in the above code, so that it will print the property names of the object rect1?
+A : in
+
+---------------------------------------------
+
+var nb = 0;
+
+for(var i=0; i < 3; i++) {
+  for(var j = i; j < 3; j++) {
+    console.log("i: " + i + " j: " + j);
+    nb++;
+  }
+}
+
+console.log("nb: " + nb);
+
+Q : What will be the value of nb at the end of the execution of these loops? 
+    (nb is the number of times the inner block of instructions will be executed...)
+A : 6
+
+----------------------------------
+
+function processClick(event) {
+   console.log("Button clicked!");
+}
+
+Q : Which of these syntaxes is ok for detecting a click on an HTML button?
+A : <button id="myButton" onclick="processClick(event);">Click me!</button>
+
+---------------------------------------
+
+addEventListener('click', function(evt) {
+    document.body.innerHTML += 'Clicked!';
+});
+
+Q : What does the above code do?
+A : Adds a click event listener to the whole document (any click on the page will trigger the event)
+
+----------------------------------------
+
+...
+<head>
+...
+</head>
+<body>
+   <button id="myButton">Click me!</button>
+<script>
+   var b = document.querySelector("#myButton");
+   b.addEventListener('click', function(evt) {
+      alert("Button clicked");
+   });
+</script>
+</body>
+
+Q : The above code will display an HTML page with an HTML button. What will happen when a user clicks on the button?
+A : It will display an alert dialog with the text "Button Clicked"
+
+----------------------------------------------
+
+...
+<head>
+   <script>
+       var b = document.querySelector("#myButton");
+       b.addEventListener('click', function(evt) {
+          alert("Button clicked");
+       });
+   </script>
+</head>
+<body>
+   <button id="myButton">Click me!</button>
+</body>
+
+Q : The above code will display an HTML page with an HTML button. What will happen when a user clicks on the button?
+A : It will do nothing, and there will be an error in the devtool console
+
+------------------------------------------------
+
+
+...
+<head>
+   <script>
+       function init() {
+           var b = document.querySelector("#myButton");
+           b.addEventListener('click', function(evt) {
+              alert("Button clicked");
+           });
+       }
+   </script>
+</head>
+<body onload="init();">
+   <button id="myButton">Click me!</button>
+</body>
+
+Q : The above code will display an HTML page with an HTML button. What will happen when a user clicks on the button?
+A : It will display an alert dialog with the text "Button Clicked"
+
+--------------------------------------------------
+
+function processClick(evt) {
+    alert("Button clicked!");
+}
+
+Q : Each event listener callback function gets an event object as a parameter. 
+    We can use one property of the event object to get the HTML element that emitted the event. Which property is it?
+A : evt.target 
+
+-------------------------------------------------
+
+window.onkeydown = function(evt) {
+  console.log("key = " + evt.XXX);
+}
+
+Q : What would you write in the above code to get the key that has been pressed?
+A : key
+
+------------------------------------------------
+
+
+window.onmousedown = function(evt) {
+  document.body.innerHTML += "button = " + evt.XXX + "<br>";
+
+}
+
+Q : What is the property name for getting the mouse button number (e.g., what would you write instead of XXX in the above code)?
+A : button
+
+-----------------------------------------------
+
+Q : Which of these are not mouse events (three correct answers)?
+
+1. click
+2. mouseclick
+3. doubleclick
+4. mouseup
+5. mousemotion
+6. mousedown
+
+A : 2, 3, 5 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

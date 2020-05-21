@@ -1,0 +1,329 @@
+**********************
+QUESTIONS AND ANSWERS!
+**********************
+
+Q : Can JavaScript only run in a Web browser?
+A : NO - JavaScript can be run outside of the browser on a remote server
+-------------
+Q : On modern browsers, JavaScript is the only programming language a 
+    browser can run without installing any plugins or extensions. True or false?
+A : True
+-------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JavaScript and HTML</title>
+  <meta charset="utf-8"/>
+  <script>
+    function changeTitleCSSStyle() {
+      var title = document.querySelector("#mainTitle");
+      title.style.color = 'black';
+      title.style.backgroundColor = "yellow";
+      title.style.border = "5px dashed red";
+    }
+  </script>
+</head>
+  <body>
+    <h1 id="mainTitle">My home page</h1> 
+ 
+    <p>This is an example of interactivity between JavaScript and the HTML content of a document.</p>
+    <button onclick="changeTheTitle();">Click me</button>
+  </body>
+</html>
+
+
+Q : With the above source code, what will happen when one clicks on the button?
+A : There is ab error in this code, it will do nothing and return 
+    and raise an error in the devtool console. 
+    This code will do nothing and display an error in the devtool console. 
+    A click on a button will try to call a JavaScript function named 
+    "changeTheTitle", and there is no such function in the JavaScript
+    code between <script> and </script>. The only defined function is named "changeTitleCSSStyle".
+--------------------------
+
+
+var parameters = {
+    target: '#myFunction',
+    data: [{
+            fn: 'sin(x)',
+            color: 'red'
+        }
+    ],
+    grid: true,
+    yAxis: {domain: [-1, 1]},
+    xAxis: {domain: [0, 2*Math.PI]},
+};
+ 
+functionPlot(parameters);
+
+
+Q : In the above code, the variable named "parameters" is an object. 
+    One of its direct properties is an array. What is the name?
+A : The data property is the only direct property that is an array, as it is declared using brackets.
+
+------------------------------
+
+Q : In the above code, how would you access the grid property of the parameters object?
+A : parameters.grid - We access properties of an object using the "." operator
+
+-------------------------------
+
+Q : In the above code, how would you access the color located at line 5?
+A : parameters.data[0].color
+    data is a direct propery of parameters. We access the data property
+    using parameters.data, then data is an array, and array indexes start at 0.
+    data has only one element (the object {fn: 'sin(x)', color: 'red'}).
+-------------------------------
+
+Q : We use the script HTML tag for inserting/embedding JavaScript code in an HTML document.
+    Below, we describe different uses of this tag. Please check the ones that are incorrect 
+    (three answers are incorrect)!
+A : <script src = "myScript.js">
+    <script src="myScript.js/>
+    <script src="../utils.html></script>
+------------------------------
+
+Q : Only on of these is true:
+1. JavaScript code can be located in external JS files, using a relative or absolute URL
+   (they can be on the same hard disk as the html file that includes them or on any external HTTP server).
+2. JavaScript code can be located in external JS files, but on the same server as the HTML file that includes them
+3. JavaScript code should be always located between <script>...</script> tags in an HTML document
+
+A : the answer is 1
+    JavaScript code can be located in different places, in HTML between script tags, in local or external files, using relative or absolute URLs.
+
+------------------------------
+
+Q : Can we include more than one JavaScript file in an HTML document?
+A : Yes!
+
+------------------------------
+
+Q : How do you print a debug message in the devtool console?
+A : Execute console.log(...) in your code.
+
+------------------------------
+
+SOURCE CODE
+
+var x1 = 10;
+var x2 = 12;
+var x3 = 9.5;
+var x4 = 15;
+ 
+function compute(x1, x2, x3, x4) {
+    var m = (x1 + x2 + x3 + x4)/5.0;
+    var n = m*12*m/2.;
+    var o = n-0.94;
+    return o/518;
+}
+ 
+// Call the above function with x1, x2, x3, x4
+// What is the result, add here a mean to display
+// the result in the console
+var result = compute(x1, x2, x3, x4);
+console.log(result);
+
+
+
+Q : Type the above source code in CodePen or in the devtool console and execute it, a result will be
+    printed in the devtool console. Try to understand where it comes from? what is the value of m, of n, of o, etc..
+A : 1
+
+------------------
+
+Q : Is it possible to see the value of the global variables x1, x2, x3, x4 without adding any source code?
+A : Yes. x1, x2, x3, x4 are global variables declared with the keyword var, outside any function. 
+    They can be accessed from the devtool console. Just type their name in the console.
+
+---------------------
+
+Q : Check the valid variable declarations: 
+1. var 1x = 10;
+2. var for=2;
+3. let $name = "Michel";
+4. const #x = 5;
+5. var x = 0xFF;
+6. var x=1, y=2, z;
+
+A : 3, 5 and 6
+
+-----------------------
+
+Q : Are variable names case sensitive? (i.e: var x=10; console.log(X); will give an error)
+A : TRUE
+
+-----------------------
+
+Q : There are naming rules and conventions for variable names. Check the names that follow these conventions: 
+   (select all that apply - 3 correct answers!)
+1. var x = 10;
+2. let name = "Michel";
+3. const FAMILY_NAME = "Buffa";
+4. var final_result;
+5. var _myCar = "Ferrari";
+
+A : 1, 2, and 3
+
+-----------------------------
+
+SOURCE CODE
+
+var name = "Zorro";
+ 
+function displayName() {
+   console.log(name);
+}
+ 
+displayName();
+ 
+function displayName1(name) {
+   console.log(name);
+}
+ 
+displayName1("Indiana Jones");
+ 
+// local scope again
+function displayName2() {
+   var name = "Batman";
+   console.log(name);
+}
+ 
+displayName2();
+
+
+
+Q : What value will be displayed in the devtool console after the execution of line 7?
+A : Zorro
+
+------------
+
+Q : What value will be displayed in the devtool console after the execution of line 13?
+A : Indiana Jones
+
+------------
+
+Q : What value will be displayed in the devtool console after the execution of line 21?
+A : Batman
+
+-------------
+
+var name = "Michel";
+var result = name/3;
+console.log(result);
+
+Q : What will be printed in the devtool console?
+A : NaN
+
+--------------------
+
+var x = 125;
+var result = x/0;
+console.log(result);
+
+Q : What will be printed in the devtool console?
+A : Infinty
+
+------------------------
+
+Q : JavaScript is a weakly typed language. This means that you do not declare the type of the variables. 
+    However, variables do have a data type and JavaScript figures out this type for you 
+    (and you can know it using the typeof operator). Which of these data types does not exist in JavaScript?
+A : Array - JavaScript has a small set of primitive data types: number, string, boolean, undefined and null.
+    Anything that is not listed above is an object. Array or array is not a data type.
+
+------------------------
+
+var x = 010;
+var y = 10;
+
+console.log("x = " + x + " y = " + y);
+
+Q : What will be displayed in the devtool console?
+A : x = 8 y =10
+
+-------------------------
+
+var a = 200; var b = a--;
+console.log("b = " + b + " a = " + a);
+
+Q : What will be displayed in the devtool console?
+A : b = 200 a = 199
+
+--------------------------
+
+var s = '10'; 
+s++; 
+console.log("value of s:" + s + " type of s: " + typeof(s));
+
+Q : When you execute the code above, what will be printed to the devtool console?
+A : value of s:11 type of s: number
+
+---------------------------
+
+
+var john = {
+    fullName='John Doe',
+    city='New York',
+    ssn="11-22-33-44"
+}
+
+Q : Is the above code correct?
+A : NO - When declaring an object using { and }, the property name should be followed by a column, not the equal sign
+
+----------------------------
+
+var daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+Q : What is the length of the array shown above?
+A : 7
+
+-------------------------------
+
+var daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+Q : What day corresponds to daysOfWeek[2] ?
+A : 'Wednesday' 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

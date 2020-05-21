@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Simple input field validation using the 'input' event</h1>
+    <p>Just type a name in the input field and see what happens! <span style="color:red"> TRY TO TYPE A "!" too</span></p>
+    <label>
+    
+        <span>Name (required):</span>
+        <input type="text" 
+                name="nom" 
+                maxlength="32" 
+                required
+                onkeyup = "validateName(event);">
+    </label>
+    
+    <p>
+        <span id="keyTyped"></span>
+    </p>  
+</body>
+</html>

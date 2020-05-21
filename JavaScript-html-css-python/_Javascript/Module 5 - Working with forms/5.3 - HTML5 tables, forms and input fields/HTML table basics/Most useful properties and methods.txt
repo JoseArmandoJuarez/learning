@@ -1,0 +1,76 @@
+**********************************
+MOST USEFUL PROPERTIES OF A TABLE
+**********************************
+
+rows - Returns a collection of all <tr> elements in a table
+
+caption - Returns the <caption> element of a table
+
+tfoot - Returns a reference to the <tfoot> element of a table
+
+thead - Returns a reference to the <thead> element of a table
+
+
+*******************************
+MOST USEFUL METHODS OF A TABLE
+*******************************
+
+insertRow() - Creates an empty <tr> element and adds it to the table. 
+		Example: var row = table.insertRow(); //inserts a new row at the end of the table.
+		
+		Example: var row = table.insertRow(0); //inserts at index = 0
+		example: var row = table.insertRow(10); //inserts at index = 10, and pushes all the rows after this index
+
+deleteRow() - Removes a row (<tr>) from the table.
+		Example: table.delteRow(0); deletes the row at index 0
+
+createCaption() - Creates an empty <caption> element and adds it to the table
+
+deleteCaption() - Removes the first <caption> element from the table
+
+createTHead() - Creates an empty <thead> element and adds it to the table
+
+deleteTHead() - Removes the <thead> elements from the table
+
+createTFoot() - Creates an empty <tfoot> element and adds it to the table
+
+deleteTFoot() - Removes the <tfoot> element from the table
+
+
+
+
+
+************************************
+MOST USEFUL PROPERTIES OF TABLE ROW
+************************************
+
+cells - Returns a collection of all <td> ot <th> elements in a table row
+
+rowIndex - Returns the position of a row in the rows collection of a table
+
+sectionRowIndex - Returns the position of a row in the rows collection of a <tbody>, <thead>, or <tfoot>
+
+
+***********************************
+MOST USEFUL METHODS OF A TABLE ROW
+***********************************
+
+inserCell() - Inserts a cell into the current table row. Without parameters, appedns a cell after the last cell of the row. 
+		You can pass the index of the cell as a unique parameter, in which case other cells are "pushed" to the right.
+		The value of 0 results in the new cell being inserted at the first position. The value of -1 can also be used,
+		which results in the new cell being inserted in the last position.
+
+deleteCell() - Deletes a cell from the current table row. There is one parameter for this method: the index of the cell to remove.
+		The value of 0 results in the deletion of the first cell. The value of -1 can also be used, which results in the 
+		deletion of the last cell.
+
+ 
+
+
+
+
+
+
+
+
+

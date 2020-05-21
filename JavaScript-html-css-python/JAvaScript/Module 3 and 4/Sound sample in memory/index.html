@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Using an external library-->
+        <script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/howler/1.1.28/howler.min.js">
+        </script>
+
+        <title>Simple example that uses howler.js for playing sound samples</title>
+
+        <meta charset="utf-8">
+        <script type="text/javascript" src="javascript.js"></script>
+    </head>
+    <body>
+        <p> Turn volume 1. as soon as the button becomes enabled, 
+            that means that the sound sample has been downloaded
+            and decoaded in memory. It can now be played.
+            Click the button to play this sound. Click it rapidly: 
+            you see, it's ok for a game!
+        </p>
+
+        <!--declares a button, that is greyed by default and cannot be clicked. 
+            This is done by the disabled = true attribute-->
+        <button onclcik="playSound();" id="button1" disabled>Play sound sample 1</button>
+
+    </body>
+</html>

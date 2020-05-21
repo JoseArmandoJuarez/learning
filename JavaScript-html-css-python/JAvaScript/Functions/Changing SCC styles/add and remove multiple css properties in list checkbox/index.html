@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>querySelector and querySelector example 1</title>
+
+        <script type="text/javascript" src="javascript.js"></script>
+
+        <style>
+            .checked{
+                border: 2px dashed #000;
+                background-color: green;
+                color: yellow;
+            }
+        </style>
+
+    </head>
+    <body>
+        <button onclick="displayListOfCheckedItems();">Show checked List</button>
+
+        <button onclick="reset();">Reset List</button>
+
+        <br>
+
+        <ul id="fruits">
+            <li>
+                <input type="checkbox" name="fruit" value="apples">Apples 
+            </li>
+            <li>
+                <input type="checkbox" name="fruit" value="orange">Oranges
+            </li>
+            <li>
+                <input type="checkbox" name="fruit" value="bananas">Bananas
+            </li>
+            <li>
+                <input type="checkbox" name="fruit" value="grapes">Grapes
+            </li>
+        </ul>
+    </body>
+</html>

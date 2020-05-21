@@ -1,0 +1,21 @@
+html, body {
+	font-size: 15px;
+	margin-left: 0.5em;
+}
+
+#thumbs img, #full-image img {
+	margin-right: 0.3em;
+	padding: 0.2em;
+    border: 0.2em solid grey;
+    box-shadow: 2px 2px 2px grey;
+}
+
+#full-image img {
+	margin-left: 0.6em;
+}
+
+#thumbs {
+	max-width: 500px;
+	min-width: 200px;
+	float: left;
+}

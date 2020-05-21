@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="main.js"></script>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <label for="birthday">Your birthday: </label><input id="birthday" type="date" value="1965-04-16">
+    
+    <p>Please enter a starting and an ending year, then click the button.</p>
+    
+    <label for="start">Start year:</label>
+    <input type=number id="start" value=2017 min=1965 max=3000>
+    
+    <p></p>
+    
+    <label for="end">End year:</label>
+    <input type=number id="end" value=2047 min=1965 max=3000>
+    
+    <p></p>
+    
+    <button onclick="computeBirthdays();">
+        Compute how many times 
+        your birthday will occur, 
+        for each day of the week
+    </button>
+    <p></p>
+    <output id="results"></output>  
+</body>
+</html>

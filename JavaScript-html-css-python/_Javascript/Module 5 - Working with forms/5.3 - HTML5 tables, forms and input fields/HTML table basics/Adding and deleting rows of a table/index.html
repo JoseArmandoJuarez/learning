@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="main.js"></script>
+
+    <style>
+        table {
+            width:100%;
+            border:1px solid;
+            border-collapse: collapse;
+        }
+
+        tr, th, td {
+            border:1px solid;
+            font-family:courier;
+        }
+
+        td {
+            text-align:center;
+            padding:10px;
+        }
+    </style>
+
+</head>
+<body>
+    <table id="myTable">
+        <caption>A typical HTML table</caption>  
+        <tr>
+           <th>Given Name</th>
+           <th>Family Name</th> 
+           <th>Age</th>
+        </tr>
+        <tr>
+           <td>Michel</td>
+           <td>Buffa</td> 
+           <td>52</td>
+        </tr>
+        <tr>
+           <td>Dark</td>
+           <td>Vador</td> 
+           <td>Unknown</td>
+        </tr>
+        <tr>
+           <td>Luke</td>
+           <td>Skywalker</td> 
+           <td>Unknown</td>
+        </tr>
+    </table>
+         
+    <p>Click to add a new row</p>
+    <button onclick="insertRow();">Add a new row</button>
+    
+    <p>Click to delete the first row of the table</p>
+    <button onclick="deleteFirstRow();">Delete first row</button>
+</body>
+</html>

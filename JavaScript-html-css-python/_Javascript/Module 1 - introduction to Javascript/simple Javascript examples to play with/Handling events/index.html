@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Javascript and event handling</title>
+
+        <script type="text/javascript" src="script.js"></script>
+
+        <style>
+            #theDiv{
+                width: 300px;
+                height: 33px;
+                background-color: pink;
+            }
+        </style>
+
+    </head>
+    <body onload="init();">
+        <p>Type some text in this input field :
+            <input type="text" oninput="showWhatWeTyped();" id="inputField"/>
+        </p>
+
+        <p>
+            You are typing:
+        </p>
+
+        <div id="theDiv">
+        </div>
+
+    </body>
+</html>

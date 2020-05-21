@@ -1,0 +1,31 @@
+body {
+  padding:0;
+  margin:0;
+  font-family: 'Raleway', sans-serif;
+}
+
+hr{
+  display: block;
+  unicode-bidi: isolated;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  overflow: hidden;
+  margin-top: 1px;
+  margin-left: 25%;
+  margin-right: 25%;
+  border-style: inset;
+  border-width: 1px;
+}
+
+#name{
+  text-align: center;
+  margin-top: 5%;
+  font-size: 2em;
+}
+
+#contacts{
+  text-align: center;
+  
+}

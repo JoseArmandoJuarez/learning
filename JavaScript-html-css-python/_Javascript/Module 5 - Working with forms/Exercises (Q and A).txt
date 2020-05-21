@@ -1,0 +1,556 @@
+let p1 = {
+    name:'Michel',
+    age: 52
+};
+
+let p2 = p1;
+p2.name = 'John';
+console.log('p1.name = ' + p1.name);
+
+Q1. What will be the value of p1.name?
+
+A. John
+B. Michel
+
+Answer: A - John
+
+
+----------------------------------------
+
+1/1 point (graded)
+var p1 = { 
+    name:'Michel', 
+    age:52
+}
+
+function tryToMakeOlder(a, b) {
+    a.age += b;
+}
+
+tryToMakeOlder(p1, 3);
+console.log("New age of p1: " + p1.age);
+
+Q2. What will be the value of p1.age?
+A. 55 
+B. 52
+
+Anwer: 55
+
+-----------------------------------------------
+
+1/1 point (graded)
+let obj1 = { 
+   x: 2 
+};
+
+function add(a, b) {
+    var originalValue = a.x;
+    
+    return {
+        x: originalValue + b
+    }
+};
+let obj2 = add(obj1, 3);
+
+Q3.What will be the value of obj2.x and obj1.x after the execution of the above code?
+
+A.obj1.x = 2 and obj2.x = 2
+B.obj1.x = 2 and obj2.x = 5 
+C.obj1.x = 5 and obj2.x = 5
+
+Answer: B
+
+------------------------------------------------------------
+
+
+
+let obj1 = {
+    x: 2
+}
+
+let obj2 = {
+    x: 2
+}
+
+Q4. The expression (obj1 === obj2) will be evaluated to:
+
+false
+true 
+
+Answer: false
+
+---------------------------------------------------------
+
+
+// obj1 and obj2 are global variables
+var obj1 = {
+    x: 2
+}
+
+let obj2 = {
+    x: 2
+}
+
+Q5. Which of these is true?
+
+A. obj1 and window.obj1 are the same objects
+B. obj2 and window.obj2 are the same objects
+
+Answer: A
+
+---------------------------------------------------------------------
+
+var t = [1, 2, 3];
+
+Q6. console.log("t = " + t) is equivalent to:
+
+A. console.log("t = " + t.toString()); 
+B. console.log("t = " + t.join(' '));
+
+Answer: A
+
+
+------------------------------------------------------------
+
+let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
+
+Q7. What will the execution of days.length = 7; do?
+
+A. Make an error, the length is fixed and equal to the number of elements in the array. 
+	It changes only when we add or remove elements to the array. 
+B. Add two extra elements to the array, with an undefined value.
+C. Add two extra elements to the array, with a value of zero (the number 0).
+ 
+Answer: B
+
+------------------------------------------------------------------------------------
+
+
+let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
+
+days.description = 'days of the week';
+
+console.log("Description of the array:" + days.description + ", its length is equal to " + days.length);
+
+Q8. What will the execution of the above code display to the devtool console?
+
+A. It raises an error because an array is not an object
+B. Description of the array:days of the week, its length is equal to 5
+C. Description of the array:days of the week, its length is equal to 6
+
+Answer: B
+
+-----------------------------------------------------------------------
+
+Q9. Which one of these methods modifies an array?
+
+A. The splice method
+B. The slice method
+ 
+Answer: A
+
+------------------------------------------------------------------
+
+
+let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+let weekEnd =  days.slice(XXX, YYY);
+
+Q10. What would you put instead of XXX and YYY in the call to days.slice(XXX, YYY) in order to get the weekend days (Saturday and Sunday)?
+
+A. let weekEnd = days.slice(days.length-2, days.length);
+B. let weekEnd = days.slice(6, 7);
+C. let weekEnd = days.slice(5, 6);
+D. let weekEnd = days.slice(7, 8);
+ 
+Answer: A
+
+--------------------------------------------------------------------
+
+
+let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+let weekEnd =  days.splice(1, 3);
+
+Q11. What will be the content of the array days after the execution of the above code?
+
+A. days is not modified.
+B. ['Monday', 'Friday', 'Saturday', 'Sunday']
+C. ['Thursday', 'Friday', 'Saturday', 'Sunday']
+D. ['Monday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+
+Answer:  B
+
+--------------------------------------------------------------------------
+
+
+let x = Math.PI/2;
+
+console.log("x= " + x.XXX); // expected 1.57, do not use Math. something here.
+What method and parameter value would you use to display the value of x with only 2 decimals? 
+We want "x = 1.57" to be displayed in the devtool console. Type exactly what you would write instead of XXX in the code above.
+
+Answer: x.toFixed(2)
+
+------------------------------------------------------------------------    
+
+let s = "Hello my dear students!";
+
+s[9] = "terrible";
+
+console.log(s);
+
+Q13. What will be printed in the devtool console?
+
+A. Hello my dear students!
+B. Hello my terrible students!
+
+Answer: A 
+
+-------------------------------------------------------------
+
+let s = "Hello my friends!";
+
+Q14. Which of these will modify the string referenced by s after their execution? (2 correct answers!)
+
+A. s.slice(11, 16);
+B. s.substring(11, 16);
+C. s += " I miss you";
+D. s.split(' ').join('---');
+E. s = s.slice(11, 16);
+
+Answer: C, E
+
+---------------------------------------------------------
+
+
+var x = new Math();
+
+console.log("Random number: " + x.random());
+
+Q15. What will the above code do?
+
+A. It does nothing - the Math class cannot be used to create instances with "new"
+B. It displays a random number between 0 and 100
+C. It displays a random number between 0 and 1
+
+Answer: A
+
+-------------------------------------------------------------
+
+var x = 5*Math.round(Math.random());
+
+console.log("Random number: " + x);
+
+Q16. What will the above code do?
+
+A. Display a random number equal to 0, 1, 2, 3, 4 or 5
+B. Display a random number equal to 0 or equal to 5
+C. Display a random number between 0 and 5
+
+Answer: B
+
+-------------------------------------------------------------- 
+
+var date = new Date();
+
+Q17. A call to new Date() returns...
+
+A. The current date as an object
+B. The current date as a string
+
+Answer: A
+
+-----------------------------------------------------------
+
+let myTable = document.createElement("table");
+
+let row = myTable.XXX;
+row.innerHTML = "<td>Michel</td><td>Buffa</td>";
+
+Q18. Instead of XXX in the above code, what method would you call for adding a row at the end of the table object myTable?
+
+A. addRow()
+B. insertRow()
+C. createElement("tr");
+ 
+Answer: B
+
+
+--------------------------------------------------------------
+
+
+<form onXXX=" return submitted();">
+   // here labels, input fields, etc.
+   
+   <button>Submit</button>
+</form>
+
+<script>
+    function submitted(evt) {
+       // get input fields values, etc
+       
+       // return false = do not submit the form
+       // return true = let the browser submit the form and reload the page
+       return false;
+   }
+</script>
+
+Q19. What event name would you put instead of XXX at the line 1 of this code, in order to make the 
+callback function submitted called when the form is submitted (by clicking on the HTML button at the end of the form)?
+
+A. keydown
+B. submit
+C. click
+ 
+Answer: B 
+
+---------------------------------------------------------------
+
+
+let p1 = {
+   name:'Michel',
+   email: 'michel@w3cxgreatmoocmakers.com'
+}
+
+// Save to Local Storage in JSON
+
+let a = XXX;
+localStorage.michel = a;
+
+Q20. What would you put instead of XXX in the above code?
+
+A. JSON.stringify(p1);
+B. JSON.parse(p1);
+C. p1; 
+
+Answer: A
+
+----------------------------------------------------------------
+
+Q21. Let's suppose that the object p1 from the previous question has been saved in JSON in the local storage of your browser, with the key "michel". How do you restore it as a JavaScript object?
+
+A. p1 = JSON.stringify(localStorage.michel);
+B. p1 = JSON.parse(localStorage.michel);
+C. p1 = localStorage.michel
+ 
+Answer: B
+
+-----------------------------------------------------------------
+
+
+Q22. Xhr2 and fetch are standard JavaScript APIs. What are they useful for?
+
+A. They can send asynchronous HTTP requests to retrieve remote data, often in JSON format
+B. They allow you to control a remote HTTP server
+C. They allow to manipulate data saved locally by the browser
+
+Answer: A
+
+-------------------------------------------------------------
+
+
+let x = "10";
+let y = 2;
+
+let z = x * y;
+
+Q23. The value of z is:
+
+A. "20" (as a string)
+B. 20
+C. NaN
+
+Answer:  B
+
+-------------------------------------------------------------------
+
+Q24. In JavaScript, are classes and types the same thing?
+
+A. No 
+B. Yes
+
+Answer: A 
+
+-------------------------------------------------------------------
+
+Q25. Which variables have a function scope?
+
+A. The ones declared in a function, with the keyword var
+B. The ones declared in a function, with the keyword let
+ 
+Answer: A
+
+-------------------------------------------------------------------
+
+Q26. Can we pass a variable number of arguments to a function?
+
+A. Yes
+B. No
+
+Answer: A 
+
+
+------------------------------------------------------------------------
+
+
+let a = [ 'michel', 'buffa', [5+6, 'buffa'] ];
+
+Q27. How is this expression evaluated: (a[1] === a[2, 1])?
+
+A. It is evaluated to true
+B. It is evaluated to false
+ 
+Answer: A
+
+--------------------------------------------------------------------
+
+let i = 0;
+while (i < 3) {
+ console.log("I did it!");
+ i++;
+}
+
+Q28. What will be printed by the above code?
+
+A. "I did it!" four times
+B. "I did it!" three times
+C. "I did it!" two times 
+
+Answer: B
+
+---------------------------------------------------------
+
+for (let col = 0; col < 10; col++) {
+     for (let row = 0; row < 15; row++) {
+          console.log("row = " + row + " col = " + col);
+     }
+}
+
+Q29. What will be printed by the above code??
+
+A. "row = 0 col = 0", "row = 1 col = 0" (on the next line), 
+	"row = 2 col = 0" (on the next line) etc until 
+	"row = 14 col = 0" ...then 
+	"row = 0 col = 1", "row = 1 col = 1", "row = 2 col = 1", etc.
+B. "row = 0 col = 0", "row = 0 col = 1" (on the next line), 
+	"row = 0 col = 2" (on the next line) etc until 
+	"row = 0 col = 10"...then 
+	"row = 1 col = 0", "row = 1 col = 1", "row = 1 col = 1", etc.
+ 
+Answer: A
+
+-------------------------------------------------------------
+
+var myAge = 52;
+
+if ((myAge >= 0 && myAge < 3) ||  (myAge > 90)) {
+  console.log("WOW!");
+} else {
+  console.log("Ah...");
+}
+
+Q30. What will be printed by the above code?
+
+A. Ah...
+B. WOW!
+
+Answer: A 
+
+-----------------------------------------------------------
+
+const MY_ANIMAL = 'My cat named Fifeti!';
+
+if (MY_ANIMAL) {
+  const MY_ANIMAL = 'My white rabbit named Pinpin';
+}
+console.log(MY_ANIMAL);
+
+Q31. What will be printed by the above code?
+
+A. My cat named Fifeti!
+B. My white rabbit named Pinpin
+ 
+Answer: A
+
+-----------------------------------------------------------
+
+let x = 52;
+if (true) {
+  let x = 94;
+}
+console.log(x);
+
+Q32. What will be printed by the above code?
+
+A. 52
+B. 94
+
+Answer: A 
+
+------------------------------------------------------
+
+
+Q33. Which keyword is not allowed in ES6 Class definition?
+
+A. constructor
+B. static
+C. function
+ 
+Answer:  C
+
+-------------------------------------------------------
+
+<div id="container"> 
+   <div id="a"> 
+      <div id="b"></div> 
+   </div> 
+   <div id="c"></div> 
+</div> 
+<script> 
+var container = document.querySelector("#container"); 
+console.log(container.querySelectorAll("div div").length); 
+</script>
+
+Q34. What will be printed in the devtool console?
+
+A. 3
+B. 2
+C. 1
+
+Answer:  A
+
+---------------------------------------------------------
+
+The method document.createElement(...) is useful for creating new DOM elements. What sort of argument does it take?
+
+A. the name of an html tag
+B. any string based name
+C. an id
+
+Answer: A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

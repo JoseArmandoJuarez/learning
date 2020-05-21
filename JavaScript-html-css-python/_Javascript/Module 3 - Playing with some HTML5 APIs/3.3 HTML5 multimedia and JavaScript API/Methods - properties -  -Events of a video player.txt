@@ -1,0 +1,33 @@
+METHODS             |     PROPERTIES     |    EVENTS
+***********************************************************
+play()              |   currentSrc       |   play
+
+pause()	            |    currentTime	 |    pause
+
+load()	            |startTime (readonly)|	progress
+
+canPlayType()       |     videoWidth	 |   error
+
+videoHeight         |     timeupdate     |
+
+duration (readonly) |  	   ended         |
+
+ended (readonly)    | 	   abort         |
+
+error	            |        empty       |
+   
+paused (readonly)   |       emptied      |
+
+muted	            |       waiting      |
+
+seeking	            |   loadedmetadata
+
+volume	
+
+height	
+
+width
+
+seekable (readonly)
+
+played (readonly)

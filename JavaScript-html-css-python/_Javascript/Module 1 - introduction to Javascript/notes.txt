@@ -1,0 +1,107 @@
+what is a server ?
+Is a computer designed to send requests and deliver data to another 
+computer over the internet or local network.
+
+
+
+What is a remote server?
+A server which is not in your premises can be called as a remote sever. 
+Itcan be in a different building, city or country.
+
+
+
+What is optical fiber?
+It sends data from one point to another which
+light signals can be sent with very little loss of strength
+
+
+
+Operating system?
+is a system that provides common services for computer programs
+examples:
+windows, macOS, Linux, IOS
+
+
+
+API(Application programming interface)
+an API 
+
+can call several functions/methods or access properties of the DOM
+
+
+
+
+FUNCTION CALL
+---------------
+function(...);
+
+Where the "..." corresponds to some of parameter. When you see a name followed by two parentheses
+(like this) folowed by a ";" this is a function call
+
+
+FUNCTION
+--------
+a function is a piece of code defined somewhere else, that can accept parameters
+(the "thing" between the parentheses), and that will do something. 
+
+PARAMETERS
+----------
+The "thing" between parentheses is what we call "the parameters of the funtion"
+refers to the input supplied at function call.
+
+
+VARIBLE
+--------
+A variable's data type indicates what sort of value the variable represents
+such as whether it is an integer, a floating-point number, or a character. 
+
+
+VARIABLE SCOPES
+---------------
+The scope of a variable correponds to the locations in your code
+
+//Global variable
+var x = 1;
+
+//Local variable
+function f1(){
+	var x = 2;
+}
+
+
+EXPRESSION
+----------
+is a small piece of code used to produce a value
+example: the expression 3+5 produces 8 and value 11 alone is also an expression 
+
+
+OPERATORS +, -, /, *
+---------
+unary operator example: invloving one thing
+typeof 'world';
+
+Binary operator example: involving two things (using +, -, /, *)
+var x = 45/32;
+
+
+
+QUESTIONS & ANSWERS
+*******************
+
+Q - Can JavaScript only run in a Web browser?
+A - NO 
+JavaScript can be run outside of the browser (on a remote server, or in scripts run by the operating system)
+
+Q - On modern browsers, Javascript is the only programming language a browser
+     can run without installing any plugins or extensions. True or False?
+
+A - True 
+
+
+
+
+
+
+
+
+

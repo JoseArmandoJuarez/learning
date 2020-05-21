@@ -1,0 +1,79 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" type="text/css" media="screen" href="main.css" />-->
+    <script src="main.js"></script>
+</head>
+<body>
+    
+  <section class="container">
+    <h2>Video Quiz</h2>
+
+    <video id="myvideo" controls> 
+	    <!-- I have three versions of the video encoded with
+	     different codecs.  The browser will automatically
+	     choose the first one it knows it can play. --> 
+	    <source src=http://html5doctor.com/demos/video-canvas-magic/video.webm type=video/webm> 
+	    <source src=http://html5doctor.com/demos/video-canvas-magic/video.ogg type=video/ogg> 
+	    <source src=http://html5doctor.com/demos/video-canvas-magic/video.mp4 type=video/mp4> 
+    </video>
+
+    <div class="controlpanel">
+      <div class="title">Control Panel</div>
+      <button onclick="playVideo();"><b>Play</b></button>
+      <button onclick="pauseVideo();">Pause</button>
+      <button onclick="stopVideo();">Stop</button>
+      <button onclick="rewindVideo();">Restart video</button>
+    </div>
+
+   
+    <h2>What is flying across the screen?</h2>
+    <input type="radio" name="question1" value="a">
+    <span>dog</span>
+    <input type="radio" name="question1" value="b">
+    <span>cat</span>
+    <input type="radio" name="question1" value="c">
+    <span>bird</span>
+
+
+    <h2>How many cats do you see?</h2>
+    <input type="radio" name="question1" value="a">
+    <span>two</span>
+    <input type="radio" name="question1" value="b">
+    <span>one</span>
+    <input type="radio" name="question1" value="c">
+    <span>three</span>
+
+    <h2>What food are they serving?</h2>
+    <input type="radio" name="question1" value="a">
+    <span>burgers</span>
+    <input type="radio" name="question1" value="b">
+    <span>Tuna</span>
+    <input type="radio" name="question1" value="c">
+    <span>Pizza</span>
+
+    <h2>One cat is eating what?</h2>
+    <input type="radio" name="question1" value="a">
+    <span>chillies</span>
+    <input type="radio" name="question1" value="b">
+    <span>fryes</span>
+    <input type="radio" name="question1" value="c">
+    <span>fish</span>
+
+    <h2>The name of the red cat is?</h2>
+    <input type="radio" name="question1" value="a">
+    <span>nylon</span>
+    <input type="radio" name="question1" value="b">
+    <span>cotton</span>
+    <input type="radio" name="question1" value="c">
+    <span>polyester</span>
+
+    <br/>
+
+  </section>
+</body>
+</html>

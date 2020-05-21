@@ -1,0 +1,47 @@
+/* don't use serif */
+html, body {
+    font-family: Arial, Verdana, "Courier New";
+  }
+  
+  
+  /* by default set list items to red */
+  ol li {
+    color: red;
+  }
+  
+  /* display women blue */
+  ol#taletwocities > li:nth-of-type(4),
+  ol#taletwocities > li:nth-of-type(5),
+  ol#taletwocities > li:nth-of-type(6),
+  ol#middlemarch > li:nth-of-type(2),
+  ol#middlemarch > li:nth-of-type(1)
+  {
+    color: blue;
+  }
+  
+  /* enumerate list items middlemarch with roman */
+  /* moved middlemarch slightly to the right */
+  /* space out list items (increase width between leters) */
+  ol#middlemarch {
+    list-style-type: lower-roman;
+    margin-left: 20px;
+    letter-spacing:1px;
+  }
+  
+  
+  /* display Joshua and Madame italicized */
+  ol > li:nth-of-type(5) {
+    font-style: italic;
+  }
+  
+  /* enumerate list items of tale of two cities in alpha */
+  ol#taletwocities {
+    list-style-type: lower-alpha;
+  }
+  
+  /* display sydney and dorothea bold */
+  ol#taletwocities > li:nth-of-type(2),
+  ol#middlemarch > li:nth-of-type(1)
+  {
+    font-weight:bold;
+  }

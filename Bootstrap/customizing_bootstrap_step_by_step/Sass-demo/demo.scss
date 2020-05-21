@@ -1,0 +1,16 @@
+$bg-color: rgb(214, 12, 12);
+
+body{
+    background: $bg-color;
+}
+
+nav{
+    background-color: yellow;
+    font-size: 20px;
+    li{
+        background-color: green;
+        a{
+            background-color: purple;
+        }
+    }
+}

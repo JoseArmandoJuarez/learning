@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Your first HTML page</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script>
+            function changeTitle()
+            {
+                console.log("Some idiot just hit the button!");
+                var title = document.querySelector("#mainTitle");
+                console.log(title);
+                console.log(title.innerHTML);
+                console.log(title.color);
+                console.log(title.backgroundColor);
+                console.log(title.border);
+                console.log(title.id);
+                console.log(title.className);
+
+                title.innerHTML += "<br>THis new <u>title</u> has been changed from Javascript"
+                title.style.backgroundColor = "pink";
+            }
+
+
+            function changeParagraph()
+            {
+                var title = document.querySelector("#hobbyTitle");
+                title.style.color = 'black';
+                title.style.backgroundColor = "yellow";
+                title.style.border = "5px dashed red";
+            }
+
+
+        </script>
+    </head>
+    <body>
+        <h1 id="mainTitle">My home page</h1>
+
+        <button onclick="changeTitle();">Click me to change the title of the page</button>
+
+        <h2 id="hobbyTitle">Who am I?</h2>
+
+        <button onclick="changeParagraph();">Click me to change the title</button>
+
+        <p class="funny">Hi! Welcome to my Home Page! My name is Jose, I'm learning how to program in javaScript</p>
+        
+        <h2>My Hobbies</h2>
+        <p class="funny">Music, Movies, Video Games, Travelling, Family, etc.</p>
+
+        <img src="https://www.clipart.com/images/articles/article2.png" alt="CAt and a fish" width="200">
+        
+        <div id="sample">
+            <h1>Some title</h1>
+            <p>Something else</p>
+        </div>
+    </body>
+    
+
+</html>

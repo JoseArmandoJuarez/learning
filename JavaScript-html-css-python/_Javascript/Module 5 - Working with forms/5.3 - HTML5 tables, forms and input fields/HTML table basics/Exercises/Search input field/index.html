@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+
+    <h2>Search a pet</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Search a PET</label>
+                
+                    <input type="text" 
+                            class="form-control"
+                            name="txt" 
+                            id="txt" 
+                            placeholder="example search: dog">
+            
+                    <br/>
+                    <button type="button" class="btn btn-dark" onclick="search();">Search</button>
+                </div>
+            </div>
+        
+            <div class="col" >
+                <p id="doesItExist"></p>
+                <!--Is the input found??-->
+            </div>
+        </div>
+
+        <div class="row">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Name Of Pets</th>
+                    </tr>
+                </thead>
+                <tbody id="myPets">
+                    <!-- <tr>
+                        <th>0. dog</th>
+                    </tr>
+                    <tr>
+                        <th>1. cat</th>
+                    </tr>
+                    <tr>
+                        <th>2. fish</th>
+                    </tr>
+                    <tr>
+                        <th>3. turtle</th>
+                    </tr>
+                    <tr>
+                        <th>4. snake</th>    
+                    </tr>
+                    <tr>
+                        <th>5. rabbit</th>
+                    </tr>
+                    <tr>
+                        <th>6. mouse</th>
+                    </tr>
+                    <tr>
+                        <th>7. hamster</th>
+                    </tr>
+                    <tr>
+                        <th>8. ferret</th>
+                    </tr>
+                    <tr>
+                        <th>9. pig</th>
+                    </tr>
+                    <tr>
+                        <th>10. hedgehog</th>     
+                    </tr> -->
+                </tbody>   
+            </table>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

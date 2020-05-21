@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Working with remote data using Xhr2</title>
+    <meta charset = "utf-8">  
+    <script type="text/javascript" src="javascript.js"></script>
+    <style>
+        table{
+            margin-top: 20px;
+        }
+
+        table, tr, td{
+            border: 1px solid;
+        }
+    </style>
+  </head>
+  <body>
+    
+    <!--xhr2 (XML Http Request level 2) uses a brand new API that is implemented 
+    only in recent browsers that is called "fetch".-->
+    
+    <p>Working with remote data using Xhr2</p>
+    <button onclick ="search();">Get a remote list of users' names and emails</button>
+    <div id="users"></div>
+  </body>
+</html>

@@ -1,0 +1,151 @@
+/*Box around content*/
+#all {
+  background-color: lightgrey;
+  border-radius: 10px;
+  padding: 20px;
+  border: .1em solid;
+  display: inline-block;
+  margin: 1em 3%;
+  width: 90%;
+}
+
+#title{
+  text-align: center;
+  text-decoration: underline;
+  font-size: 5em;
+  font-family: 'Lobster', cursive;
+}
+
+#produced{
+  text-align: center;
+  text-decoration: underline;
+  font-size: 2em;
+  margin-bottom: 5%;
+  font-family: 'Lobster', cursive;
+}
+
+#chapter{
+  text-align: left;
+  font-size: 2em;
+  color: white;
+  margin-bottom: 2%;
+  text-decoration: underline;
+  font-family: 'Lobster', cursive;
+}
+
+/*Buttons for Transcripts*/
+nav {
+  margin-left: 70%;
+  width: 100%;
+}
+
+button {
+  background-color: blue;
+  color: white;
+  font-size: 1em;
+  border-radius: 5px;
+  padding: .5em;
+}
+
+button:hover {
+  transition: all 0.5s;
+  background-color: lightblue;
+}
+
+button:active{
+  background-color: white;
+}
+
+/*Video Player*/
+#videoPlayer {
+  display: block;
+  float: left;
+  margin-right: 2.85714%;
+  width: 65.71429%;
+  background-color: black;
+  position: relative;
+  border-radius: 10px;
+}
+
+#myVideo {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/*Transcription Side Bar*/
+#transcript {
+  padding: 0.5em 1em;
+  border: .1em solid;
+  border-radius: 10px;
+  float: left;
+  overflow: auto;
+  width: 25%;
+  height: 30vmax;
+  margin: 0;
+  font-size: 1.2em;
+  line-height: 1.8;
+  list-style: none;
+  background-color: white;
+}
+
+#instructions {
+  font-size: 1.2em;
+  line-height: 1.3em;
+  text-align: center;
+}
+
+.cues {
+  color: blue;
+}
+
+.cues:hover {
+  transition: all 0.5s;
+  margin-left: -1em;
+  margin-right: -1em;
+  padding-left: 1em;
+  background-color:yellow;
+  color:black;
+  text-decoration: underline;
+}
+
+.cues.current {
+  color: black;
+  font-weight: bold;
+}
+
+/*Chapter Menu with Images*/
+#chapterMenuSection {
+  border-top: .1em solid grey;
+  display: inline-block;
+  width: 96%;
+  margin-left:2%;
+}
+
+figure.img {
+  margin: 2px;
+  float: left;
+}
+
+figcaption.desc {
+  color:grey;
+  text-align: center;
+  border: .1em solid;
+  margin: 8px;
+  font-weight: normal;  
+  max-width: 5em;
+}
+
+
+.thumb {
+  height:2.6em;
+  border: 1px solid white;
+  margin: .8em .3em 0 .3em;
+  transition: all 0.5s;
+}
+
+.thumb:hover {
+  border: .3em solid white;
+  height:3.1em;
+  transition: all .5s;
+}
+

@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head lang="en">
+    <title>Function part 1</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="javascript.js"></script>
+  
+</head>
+<body>
+    <!--<button onclick="processClick();">Click me</button>-->
+
+    <!--<button id=myButton>Click me</button>-->
+
+    <button id="myButton">Click me, this will work only once!</button>
+
+    <script>
+            //first example
+            /*
+            function processClick(evt)
+            {
+                //using DOM API To add text
+                document.body.innerHTML += "Clicked<br>";
+            }*/
+    
+            //-------------------------------------
+
+            /*
+            //1 get a reference on the element
+            let b = document.querySelector("#myButton");
+    
+            //2 add the event listener
+            b.addEventListener('click', function(evt){
+                alert("clciked!")
+            })
+            */
+    
+            var b = document.querySelector("#myButton");
+            b.addEventListener('click', processClick);
+
+            function processClick(evt){
+                alert("Button clicked, event listener removed try to click on the button again: nothing will happen anymore!")
+                b.removeEventListener('click', processClick);
+            }
+        </script>
+</body>  
+</html> 

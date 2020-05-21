@@ -1,0 +1,31 @@
+body {
+    background: red;
+}
+
+/* small devices */
+@media (min-width: 576px) { 
+    body {
+        background: orange;
+    }
+}
+
+/* medium devices */
+@media (min-width: 768px) {
+    body {
+        background: yellow;
+    }
+}
+
+/* large devices */
+@media (min-width: 992px) {
+    body {
+        background: green;
+    }
+}
+
+/* extra large devices */
+@media (min-width: 1200px) {
+    body {
+        background: blue;
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+    <title>Plotting functions in JavaScript using the function plot library</title>
+    <meta charset="utf-8"/>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://mauriciopoppe.github.io/function-plot/js/function-plot.js"></script>
+
+    <script src="javascript.js"></script>
+    <link rel="stylesheet" href="style.css"> 
+
+    </head>
+    <body onload="plot();">
+        <h2>Interactive function plotter</h2>
+      
+        <section id="plotSettings">
+          <label for="xMin">xMin: </label>
+          value: <input type=number id="xMin" value = "0" step=0.5 >
+          <p></p>
+          <label for="xMax">xMax: </label>
+          value: <input type=number id="xMax" value = "6.28" step=0.5>
+          <p></p>
+          <label for="yMin">yMin: </label>
+          value: <input type=number id="yMin" value = "-1" step=0.2 >
+          <p></p>
+          <label for="yMax">yMax: </label>
+          value: <input type=number id="yMax" value = "1" step=0.2 >
+          <p></p>
+          <label for="color1">Color for 1st function: </label> 
+          value: <input type=color id="color1" >
+          <p></p>
+          <label for="function1">1st Function to plot: </label>
+          value: <input id="function1" type="text" value="sin(x)" >
+          <p></p>
+          <label for="color2">Color for 2nd function: </label> 
+          value: <input type=color id="color2" >
+          <p></p>
+          <label for="function2">2nd Function to plot: </label>
+          value: <input id="function2" type="text" value="cos(x)" >
+          <p></p>
+          <button onclick="plot();">Plot it!</button>
+        </section>
+      
+        <section id="plot">
+          <div id="myFunction"></div>
+        </section>
+      
+      </body>
+      
+      </html>

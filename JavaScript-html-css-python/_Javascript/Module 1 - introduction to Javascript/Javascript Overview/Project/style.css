@@ -1,0 +1,28 @@
+table {
+  margin-top: 20px;
+}
+table, tr, td {
+  border: 1px solid;
+} 
+
+p{
+  text-align: center;
+  padding-bottom: 15px;
+  border-bottom: 5px dotted red;
+}
+
+#name{
+  margin-right: 20px;
+  margin-left: 8%;
+  color: blue;
+  padding-bottom: 5px;
+  border-bottom: 5px dashed;
+}
+
+td {
+  padding:10px;
+  text-align: center;
+  color: white;
+  background-color:grey;
+  border: 5px inset lightgrey;
+}

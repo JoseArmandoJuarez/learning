@@ -1,0 +1,284 @@
+var persons = [
+    {givenName: 'Michel', familyName: 'Buffa', age:51},
+    {givenName: 'Pig', familyName: 'Bodine', age:20},
+    {givenName: 'Pirate', familyName: 'Prentice', age:32}
+];
+function compareByAge(a,b) { // comparison function
+    if (a.age < b.age) // compare by age
+        return -1;
+    if (a.age > b.age)
+        return 1;
+    return 0;
+}
+console.log(XXX);
+persons.sort(compareByAge);
+
+
+Q1. At line 15, we pass the comparebyAge function as an argument to the sort() method of the
+array. How do we call such a function, passed as an argument to another function?
+
+A. A 'call back'
+B. A 'callback'
+C. Nothing special, its just a function
+
+Answer: B, the sort() method of arrays accepts a callback as an optional argument
+
+----------------------------------------------------
+
+Q2. How would you access the age of Pirate Prentice, at line 14 (what would you write instead of XXX)?
+
+A. persons[1].age;
+B. persons[2].age;
+C. persons.Pirate.Prentice.age;
+
+Answer: B, Index starts at 0. Pirate Prentice is at index 2. Then, as the array contains object, we use
+	the .operator to access the age property.
+
+----------------------------------------------------
+
+Q3.  How would you add a new Pirate to the persons array?
+
+A. persons.push({givenName:'Captain', familyName:'Hook', age:43});
+B. persons.add({givenName:'Captain', familyName:'Hook', age:43});
+C. persons[persons.length] = {givenName:'Captain', familyName:'Hook', age:43};
+D. persons[persons.length-1] = {givenName:'Captain', familyName:'Hook', age:43};
+
+Answer: A & C, You can use the push method, or you can add an element at the first index after the last
+	element of the array. The last element of an array persons is at position persons.length-1,
+	so a new element inserted at the end of an array persons will be inserted at index equal to persons.length.
+
+----------------------------------------------------
+
+
+var s = "Michel";
+var a = ['B', 'u', 'f', 'f', 'a'];
+
+
+Q4. Check the common things array and strings share.
+
+A. The length property
+B. The push and pop methods
+C. Elements/characters can be accessed using the bracket notation and indexes, like in s[3];
+
+----------------------------------------------------
+
+var persons = [
+  {name:'Michel', age:51},
+  {name:'Henri', age:20},
+  {name:'Francois', age:29}
+];
+
+for(var i = 0; i  < persons.XXX; i++) {
+  var p = persons[i]; // current element
+  
+  document.body.innerHTML += p.name + "b<r>"; 
+}
+
+
+Q5. What would you write instead of XXX in the above code, in order to iterate on the elements
+    of the persons array?
+
+Answer: length, When using a classic for loop for iterating on elements, you start with an index equal to zero 
+	(the variable i in the loop is the index), and you iterate "while i strictly less than persons.length". 
+	So, the stop condition is i strictly less than persons.length. With i = 0, we execute the code in the 
+	loop and process "Michel", then i is incremented (the i++). i is equal to 1, and less than 3 (the length
+	of the array). Then, we execute the code in the loop with i = 1 and process "Henri", we increment i. i is 
+	equal to 2, and less than the length of the array (3), we execute the code in the loop with i = 2, and 
+	process "François". Then we increment i, it's equal to 3. 3 is not strictly less than the length of the 
+	array (3), we exit the loop. We processed all elements.
+
+------------------------------------------------------
+
+
+var persons = [
+  {name:'Michel', age:51},
+  {name:'Henri', age:20},
+  {name:'Francois', age:29}
+];
+
+persons.forEach(function(a, b, c) {
+    var currentElem = XXX;
+});
+
+
+Q6. What would you write instead of XXX in the code above, in order to get the current element of the array, while
+    iterating on the elements of the array?
+
+Answer: a, The forEach method takes a single argumwnt that iis a function/callback that can have one, two, or three
+	parameters: The first parameter is the current element of the array.
+	The second parameter (optional) is the index of the current element in the array.
+	The third element is the array itself.
+	So, the right answer is "a".
+
+---------------------------------------------------------
+
+
+Q7. What would we mean by "audio and video elements have a JavaScript API"?
+
+A. They have properties, events and methods that can be manipulated from JavaScript
+B. They are written 100% in JavaScript
+
+Answer: A, Indeed, it means that, from JavaScript, we are able to call the play(), stop(), pause() methods,
+	access the current time through the currentTime property or listen to progress events (for example
+	when synchronizing things when a video is played).
+
+----------------------------------------------------------
+
+
+
+<video id="vid" poster="preview.png" controls>
+    <source src="http://html5doctor.com/demos/video-canvas-magic/video.mp4"
+            type="video/mp4">
+</video>
+<p>Example of custom controls :</p>
+ 
+<button class="mybutton" onclick="go();">Play</button>
+<button class="mybutton" onclick="haveARest();">Pause</button>
+<button class="mybutton" onclick="rewind();">Start from beginning</button>
+ 
+<script>
+  vid = document.querySelector("#vid");
+  function go() {
+    vid.BBB();
+  }
+  function haveARest() {
+    vid.CCC();
+  }
+  function rewind() {
+    vid.DDD = 0;
+  }
+</script>
+
+
+
+Q8. Which method would you call to start playing the video, instead of BBB?
+
+A. go()
+B. play()
+C. start()
+
+Answer: B, There is no start() nor go() method in the JavaScript API of the video element.
+
+----------------------------------------------------------------
+
+
+Q9. Which method would you call to pause the video, instead of CCC?
+
+A. stop()
+B. pause()
+C. cancel()
+
+Answer: B, There is no cancel() in the JavaScript API of the video element. The stop() method exists but it
+	is for stopping the video (and once stopped, it cannot be resumed). The right is the pause() method.
+
+------------------------------------------------------------------
+
+Q10. Which property would you use to rewind completely the video without stopping it 
+     (playback continues as if we jumped to the beginning), instead of the DDD string in the source code above?
+
+A. progress
+B. location
+C. currentTime correct
+D. time
+
+Answer: C, The currentTime property is in read/write. Its value changes during playback, but if we give it a 
+	value, then the video "jumps" to the position that corresponds to its value (in seconds).
+
+-------------------------------------------------------------------
+
+Q11. Which event is used in the course to detect the end of the video and implement playlist management
+
+A. end
+B. chained
+C. ended
+D. finished
+E. finish
+
+Answer: C
+
+--------------------------------------------------------------------
+
+Q12. How does the HTML5 geolocation API locate the client's browser?
+
+A. Different methods, including: GPS, GSM/3G triangulation, WIFI, and IP address; 
+   are tried to get the current location. correct
+B. Using GPS only. If no GPS, it's impossible to geolocate. 
+   That's why smartphones often ask the user to turn on the GPS.
+
+Answer: The geolocation HTML5 JavaScript API is implemented by most modern web browsers, 
+        and uses different means to get the current location: GPS, GSM/3G triangulation, 
+        WIFI, IP address, etc. Sometimes it is not possible to get a location 
+        (behind an organization's firewall, for instance).
+
+---------------------------------------------------------------------
+
+
+navigator.geolocation.getCurrentPosition(showPosition, onError);
+ 
+function showPosition(position) {
+    console.log("latitude is: " + position.coords.latitude);
+    console.log("longitude is: " + position.coords.longitude);
+}
+ 
+function onError(err) {
+    console.log("Could not get the position");
+}
+
+
+Q13. Witht the above code, if a position is available, how many times will the showPosition callback be called?
+
+A. Once
+B. Severaltimes: if we move and the position changes, the showPosition method will be called again.
+
+Answer: When a position is available, the showPosition will be called once.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

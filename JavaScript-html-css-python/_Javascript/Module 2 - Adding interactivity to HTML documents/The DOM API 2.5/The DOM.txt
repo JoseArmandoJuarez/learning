@@ -1,0 +1,86 @@
+
+
+*********
+The DOM
+*********
+The DOM API is a programming interface the JavaScript programmer can use to modify 
+the HTML content or the CSS style of HTML elements on the fly.
+
+The DOM API provides the document object as a structured object, 
+a group of nodes represented as a tree. We saw this in Module 1 when we revised the basic principles of HTML .
+
+In JavaScript, the DOM is accessible through the property document of the global object window. 
+We rarely manipulate the window object directly as it is implicit: window.document is the same as document. 
+
+
+
+********************************
+With the DOM API (old fashioned)
+********************************
+These methods are from the DOM API and can all be replaced by the querySelector and querySelectorAll
+methods that we've discussed. They are still used in many JavaScript applications, and are very simple to understand.
+
+From the document we can access the elements composing our web page in a few ways:
+
+document.getElementById(identifier) returns the element which has the id “identifier”.
+This is equivalent to document.querySelector("#identifier'); (just add a # before the id when using a CSS selector). 
+
+Example: var elm = document.getElementById('myDiv'); is equivalent to document.querySelector('#myDiv');
+
+document.getElementsByTagName(tagName) returns a list of elements which are named “tagName”.
+This is equivalent to document.querySelectorAll(tagName);
+
+Example: var list = document.getElementByTagName('img'); is equivalent to document.querySelector('img');
+
+document.getElementsByClassName(className) returns a list of elements which have the class “className”.
+This is equivalent to document.querySelectorAll('.className'); 
+
+Example: var list = document.getElementByClassName('important'); is equivalent to document.querySelector('.important'); (just add a '.' before the class name when using a CSS selector). 
+
+Notice that identifier, tagName and className must be of type String. 
+
+
+*****************
+The classList API
+*****************
+The list of methods usable on a classList object are add(), remove(), toggle() and contains().
+
+
+-----------------------------------------------------------------------------------
+
+***********************************************
+To add new nodes to the DOM follow these steps:
+***********************************************
+
+1. Create a new element by calling the createElement() method, using a syntax like:
+
+   var elm = document.createElement(name_of_the_element).
+
+	Examples:
+
+	var li = document.createElement('li');
+	var img = document.createElement('img'); etc.
+
+
+2. Set some attributes / values  / styles for this element. 
+
+	Examples: 
+
+	li.innerHTML = '<b>This is a new list item in bold!</b>'; // can add HTML in it
+	li.textContent = 'Another new list item';
+	li.style.color = 'green'; // green text
+	img.src = "http://..../myImage.jpg"; // url of the image
+	img.width = 200;
+
+3. Add the newly created element to another element in the DOM, using append(), 
+   appendChild(), insertBefore() or the innerHTML property
+
+	Examples:
+	var ul = document.querySelector('#myList');
+	ul.append(li); // insert at the end, appendChild() could also be used (old)
+	ul.prepend(li); // insert at the beginning
+	ul.insertBefore(li, another_element_child_of_ul);// insert in the middle
+	document.body.append(img); // adds the image at the end of the document
+
+
+

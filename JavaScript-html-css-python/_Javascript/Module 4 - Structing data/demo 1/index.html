@@ -1,0 +1,40 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Demo 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+<body>
+
+    <h1>Find the perfect Tool</h1>
+
+    <div id="button" onclick="sortByName();">sort by Name</div>
+
+    <div id="button" onclick="sortBySize();">sort by Size</div>
+
+    <div class="button" onclick="sortByBrand();">sort by Brand</div>
+    
+    <div class="button" onclick="sortByPrice();">sort by Price</div>
+
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Size</th>
+            <th scope="col">Brand</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody id="articles">
+        </tbody>
+      </table>
+
+    <script src="main.js"></script>
+</body>
+</html>

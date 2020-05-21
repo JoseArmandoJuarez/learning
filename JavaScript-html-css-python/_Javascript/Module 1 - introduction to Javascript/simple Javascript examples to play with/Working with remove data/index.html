@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Working with remote data</title>
+  <meta charset="utf-8"/>
+  <!-- Polyfill in case your browser does not support the fetch API -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/0.10.1/fetch.js"></script>
+
+    <script type="text/javascript" src="script.js"></script>
+    <style>
+      table{
+        margin-top: 20px;
+      }
+      table, tr, td{
+        border: 1px solid;
+      }
+    </style>
+</head>
+<body>
+  <button onclick="search();">Get remote list of users' names and emails using the fetch API</button>
+  <div id="users"></div>
+</body>
+</html>
+

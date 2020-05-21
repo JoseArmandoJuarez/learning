@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Second example of an event listener</title>
+        <meta charset="utf-8">
+        <!--
+        <script>
+            function processClick(evt){
+                document.body.innerHTML += "Clickde<br>";
+            }
+        </script>-->
+    </head>
+    <body>
+
+        <!--<button onclick="processClick();">Click me</button>-->
+
+        <button id="myButton">Click me</button>
+
+
+        <!--
+            When execute document.querySelector, the button must exist
+            in the page and must has been rendered.
+            "The DOM of the page must be ready".
+            When an HTML page is rendered, it's sequential, it goes
+            from top to bottom, so in this case, the button is created,
+            added to the DOM, then the script is executed
+            and document.querySelector will return a reference on the button.
+        -->
+
+        <script>
+            //1 get a reference on the element
+            let b = document.querySelector("#myButton");
+
+            //2 add the event listener
+            b.addEventListener('click', function(evt){
+                alert("clicked");
+            })
+        </script>
+    </body>
+</html>

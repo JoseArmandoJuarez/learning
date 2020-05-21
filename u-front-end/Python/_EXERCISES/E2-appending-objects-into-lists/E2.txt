@@ -1,0 +1,35 @@
+persons_list = {"Person 1": {"firstName": "Emma", 
+                         "lastName": "Watson", 
+                         "age": 28, 
+                         "height": "1.65m", 
+                         "weight": "110lbs", 
+                         "born": "Paris France", 
+                         "phoneNumber": "235-324-3463", 
+                         "email": "Watson@gmail.com", 
+                         "language": "French"},
+                "Person 2": {"firstName": "George",
+                           "lastName": "Clooney",
+                           "age": 57,
+                           "height": "1.8m",
+                           "weight": "176lbs",
+                           "born": "Kentuky USA",
+                           "phone Number": "185-4356-2483",
+                           "email": "mrclooney@gamil.com",
+                           "language": "French"}
+               }
+
+#NEW PERSONS ADDED TO THE LIST OF PERSONS
+person3 = {"firstName": "Adam", "lastName": "Sandler", "age": 52, "height": "1.77m", "weight": "200lbs", "born": "United states", "phoneNumber": "987-475-2543", "email": "adamSandler@gmail.com", "language":"English"}
+persons_list["Person 3"] = person3 
+
+person4 = {"firstName": "Kevin", "lastName": "Hart", "age": 39, "height": "1.63m", "weight":"230lbs", "born": "United States",  "phoneNumber": "345-313-6543", "email": "evinHart@gmail.com", "language": "English"}
+persons_list["Person 4"] = person4
+
+person5 = {"firstName": "Dwayne", "lastName": "Johnson", "age": 46, "height": "1.96m", "weight": "260lbs", "born":"United States", "phoneNumber": "123-543-7423", "email": "theRock@gmail.com", "language": "English"}
+persons_list["Person 5"] = person5
+
+print("LIST OF PERSONS!")
+print(".............")
+for persons in persons_list.items():
+    for person in persons:
+        print("{}".format(person))

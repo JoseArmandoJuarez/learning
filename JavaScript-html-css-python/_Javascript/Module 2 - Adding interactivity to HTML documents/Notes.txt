@@ -1,0 +1,128 @@
+do-while and while
+******************
+do-while statements executes the content of the loop 
+once before checking the condition of the while,
+whereas a while statement will check the condition 
+first before executing the content
+
+
+var i = 0;
+ 
+do {
+    console.log('i = ' + i);
+    i++;
+} while(i < 20);
+ 
+console.log('Value of i after the do-while statement: ' + i);
+
+//-------------------------------------
+
+
+var i = 1;
+
+while( i <= 60)
+{
+	i += i;	
+}
+
+console.log("");
+
+
+
+
+
+
+
+
+********************
+The for Statement
+********************
+this statement adds some things to the while and do-while statements:
+an initialization expression and an incrementing expression.
+
+for (var i = 0; i <= 10; i++){
+	console.log('i = ' + i);
+}
+
+
+
+********************
+The for-in statement
+********************
+Syntax: for(variable in expression) statement
+
+The for-in statement is used to iterate through an object 
+(or through an array, which is also an object)
+
+
+var jose = {              // jose is an object
+    familyName:'Juarez',     // familyName, givenName, age
+                            // are its properties
+    givenName: 'Jose',
+    age: 18
+}
+ 
+for(var property in jose) {   // the for-in will
+                                // enumerate properties
+    console.log(property);      // will print "familyName",
+                                // "givenName",
+                                // "age"
+    console.log(jose[property]);  // jose['givenName'] same 
+                                    // as jose.givenName
+}
+
+
+
+*********************
+The continue statment
+*********************
+The continue statement is used to stop the execution of a block and start
+the next iteration of the loop. The difference from the "break"
+statements is that the loop continues.
+
+for(var i = 1, k = 0; i < 5; i++) {
+    if (i === 3) {
+        continue;
+    }
+ 
+    k += 2*i;
+    console.log('k += ' + (2*i));
+}
+console.log('Final k value:' + k)
+
+
+*****************
+break statement
+*****************
+The break statement is used to stop an iteration, a switch or a labeled statement
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

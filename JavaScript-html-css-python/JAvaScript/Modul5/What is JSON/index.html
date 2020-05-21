@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+    <script>
+
+        /*The JSON.stringify() method converts a JavaScript
+        object or value to a JSON string, optionally replacing
+        values if a replacer function is specified or optionally
+        including only the specified properties if a replacer
+        array is specified.*/
+
+        var x = 3;
+        > undefined
+
+        JSON.stringify(x);
+        > "3"
+
+        //--------------
+        var simpleObject = {x:12, y:30};
+        > undefined
+
+        JSON.stringify(simpleObject);
+        > "{"x":12, "y":30}"
+        //--------------
+
+        var anArray = ['Monday', 'Tuesday', 'Wednesday'];
+        > undefined
+        
+        JSON.stringify(anArray);
+        >"["Monday", "Tuesday", "Wednesday"]"
+
+        var jsonFormat = JSON.stringify(anArray);
+        > undefined
+        
+        jsonFormat
+        > "["Monday", "Tuesday", "Wednesday"]"
+
+        //---------------------
+
+        var complexObject = {name: 'Metallica',
+                    albums:[
+                      {name: "Master of puppets", year: 1986},
+                      {name: "Black Album", year: 1991}
+                    ]
+        };
+        > undefined
+
+        var jsonFormat = JSON.stringify(complexObject);
+        > undefined
+
+        jsonFormat
+        > "{'name':'Metallica','albums':[{'name':'Master of puppets','year':1986},{'name':'Black Album','year':1991}]}"
+
+        /*The JSON.parse() method parses a JSON string,
+        constructing the JavaScript value or object described by the string.
+        An optional reviver function can be provided to perform
+        a transformation on the resulting object before it is returned.*/
+        
+        jsonFormat.name
+        >undefined
+        
+        var obj = JSON.parse(jsonFormat);
+        >undefined
+        
+        obj
+        > Object {
+          albums: [Object {
+          name: "Master of puppets",
+          year: 1986
+          }, Object {
+          name: "Black Album",
+          year: 1991
+          }],
+          name: "Metallica"
+          }
+        
+        obj.name
+        > "Metallica"
+
+         
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Modifying content of selected DOM nodes</title>
+
+        <script type="text/javascript" src="javascript.js"></script>
+
+    </head>
+
+    <body>
+        <h1>Modify the content</h1>
+
+        <p>
+            What is your name: 
+            <input type="text"
+                    id="name"
+                    value="name">
+
+            <button onclick="resetName();">
+                Reset(click to empty the input field
+            </button>
+        </p>
+
+        <p>
+            Pick a color: 
+            <input id="color"
+                    type="color"
+                    value="#FF0000">
+            
+            <button onclick="setToRed();">
+                Set color chooser to Red
+            </button>
+        </p>
+
+        <br>
+
+        <p>
+            In the next example, click on the input field and use the
+            small vertical arrows to increase the value. Notice that the
+            numbers go 1 by 1 and that the maximum value is 20. Then click
+            the button and do the same thing!
+        </p>
+
+        <p>
+            Pick a number between 0 and 20: 
+            <input id="number"
+                    type="number"
+                    min = 0
+                    max = 20 
+                    step = 1
+                    value = '10'>
+            <button onclick="changeStep();">
+                Change step and max attribute values
+            </button>
+        </p>
+
+        <img src="https://vignette.wikia.nocookie.net/warner-bros-entertainment/
+        images/2/26/Classic_bugsbunny.png/revision/latest?cb=20160801013739" 
+        onclick="changeAndResize(this)" alt="bugs bunny">
+
+    </body>
+
+</html>

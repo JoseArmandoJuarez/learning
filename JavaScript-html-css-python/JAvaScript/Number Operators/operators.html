@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+    <h1>Operators</h1>
+
+    <script>
+
+        // basic Examples
+        var y = 12;
+        console.log("y = " + y);
+
+        var a = 1;
+        var b = 2;
+        var c = a + b;
+        console.log("a + b = " + c);
+
+        var w = 99.99 - 11;
+        console.log("99.99 - 11 = " + w);
+
+        var x = 12 * 20;
+        console.log("12 * 20 = " + x);
+
+        var d = 2 * 3;
+        console.log("2 * 3 = " + d);
+
+        var e = 6 / 4;
+        console.log("6 / 4 = " + e);
+
+        var m = 0;
+        console.log("m = " + m);
+
+
+        //other examples of post and pre increments
+        var a = 123; 
+        var b = a++;
+        console.log("b = " + b);
+        console.log("a = " + a);
+
+        var a = 123;
+        var b = ++a;
+        console.log("b = " + b);
+        console.log("a = " + a);
+
+        var a = 123;
+        var b = a--;
+        console.log("b = " + b);
+        console.log("a = " + a);
+
+        //Short variant that mixes assignment and execution of an operator
+        //Binary operators can be used with a shorter syntax
+        //when we want to assign the resulting value to a variable at the same time
+
+        var a = 10;
+        a *= 5; // equivalent to a = a * 5;
+        console.log(a);
+
+        //Other examples
+        var k = 5;
+
+        k += 3; //equivalent to a = a + 3;
+        console.log(k);
+
+        k -= 2; //equivalent to k = k - 2;
+        console.log(k);
+
+        k *= 10; //equivalent to k = k * 10;
+        console.log(k);
+
+        k /= 5; //equivalent to k = k / 5;
+        console.log(k);
+
+        k %= 2; //equivalent to k = k % 2;
+        console.log(k);
+
+    </script>
+
+</body>
+</html>
